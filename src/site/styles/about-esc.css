@@ -1,0 +1,79 @@
+/* Scoped editorial layout for the supplied Eco-Social Club copy. */
+#about .frame-fast-title { font-size: clamp(2.8rem, 6vw, 5.8rem); line-height: .98; margin: 4px 0 8px; }
+#about .frame-clean-content { gap: clamp(14px, 2vh, 24px); }
+#about .frame-editorial-cols { display: block; max-width: 1000px; }
+#about .frame-cta-group { max-width: 1000px; }
+#about .esc-about-paragraph { color: #eee9de; font-size: clamp(1rem, 1.28vw, 1.2rem); line-height: 1.8; margin: 0; max-width: 1000px; }
+#about .frame-2 .esc-about-paragraph { max-width: 950px; }
+#about .meta-tag.gold { color: #dfc18a; }
+#about .esc-about-metrics { margin-top: 18px; gap: clamp(28px, 4vw, 65px); }
+#about .esc-about-metrics .stat-value-gold { font-size: clamp(2.8rem, 4vw, 4.2rem); background-image: linear-gradient(#fff1d2, #c8a361); }
+#about .esc-about-metrics .stat-label-text { font-size: .65rem; letter-spacing: .12em; }
+.about-mobile-single-section .about-mobile-single-card { max-width: 640px; }
+.about-mobile-single-section .meta-tag { font-size: .56rem; line-height: 1.7; letter-spacing: .12em; }
+.about-mobile-single-section .esc-about-paragraph { text-align: left; font-size: .9rem; line-height: 1.85; margin: 0; color: #e6e2d9; }
+.about-mobile-single-section .about-mobile-single-body { gap: 24px; }
+.about-mobile-single-section .esc-about-mobile-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; width: 100%; border-top: 1px solid #d6b77840; padding-top: 24px; margin-top: 8px; }
+.about-mobile-single-section .esc-about-mobile-metrics .stat-value-gold { font-size: 2.4rem; background-image: linear-gradient(#fff1d2, #c8a361); }
+.about-mobile-single-section .esc-about-mobile-metrics .stat-label-text { font-size: .5rem; line-height: 1.6; letter-spacing: .04em; }
+@media (min-width: 769px) and (max-height: 700px) {
+  #about .frame-fast-title { font-size: 3.3rem; }
+  #about .frame-clean-content { gap: 12px; }
+  #about .esc-about-paragraph { font-size: .94rem; line-height: 1.65; }
+  #about .esc-about-metrics { margin-top: 10px; }
+}
+
+/* Mobile-only reading experience; desktop chapter styles above are preserved. */
+@media (max-width: 768px) {
+  #about-mobile {
+    display: block;
+    position: relative;
+    isolation: isolate;
+    padding: 0;
+    border: 0;
+    background: #091411;
+    color: #f2f0e8;
+    scroll-margin-top: 0;
+  }
+  #about-mobile .esc-mobile-intro {
+    height: 260px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 44px 28px 30px;
+    background: linear-gradient(180deg, #07100d22, #09141122 40%, #091411 100%), url('/assets/about/esc-chart-room.webp') center 58% / cover;
+  }
+  #about-mobile .esc-mobile-brand { width: min(66vw, 290px); height: auto; filter: drop-shadow(0 4px 16px #000c); }
+  #about-mobile .esc-mobile-intro-caption { display: flex; align-items: center; gap: 9px; font-family: var(--font-geist-mono), monospace; font-size: .53rem; letter-spacing: .14em; color: #d9c69e; }
+  #about-mobile .esc-mobile-caption-line { height: 1px; width: 24px; background: #cdb780; }
+  #about-mobile .esc-mobile-editorial { padding: 0 27px 70px; max-width: 600px; margin: 0 auto; }
+  #about-mobile .esc-mobile-kicker { font-family: var(--font-geist-mono), monospace; color: #aebba8; font-size: .55rem; letter-spacing: .14em; margin: 0 0 17px; }
+  #about-mobile .esc-mobile-heading h2 { font-family: var(--font-bebas-neue), sans-serif; font-weight: 400; font-size: clamp(2.7rem, 11vw, 4rem); line-height: .99; letter-spacing: .025em; margin: 0; color: #f5f1e5; }
+  #about-mobile .esc-mobile-heading h2 span { color: #ddc38e; }
+  #about-mobile .esc-mobile-subtitle { font-size: .75rem; line-height: 1.7; color: #9fafaa; margin: 16px 0 0; }
+  #about-mobile .esc-mobile-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 29px 0 38px; padding: 24px 0; border-top: 1px solid #b8cdb328; border-bottom: 1px solid #b8cdb328; }
+  #about-mobile .esc-mobile-facts > div { display: flex; flex-direction: column; gap: 8px; }
+  #about-mobile .esc-mobile-facts > div + div { border-left: 1px solid #b8cdb328; padding-left: 24px; }
+  #about-mobile .esc-mobile-facts strong { font-family: var(--font-bebas-neue), sans-serif; font-size: 3rem; font-weight: 400; letter-spacing: .01em; line-height: .9; color: #edddba; }
+  #about-mobile .esc-mobile-facts strong span { color: #91a984; }
+  #about-mobile .esc-mobile-facts > div > span { font-size: .6rem; color: #b1c0b8; }
+  #about-mobile .esc-mobile-chapter + .esc-mobile-chapter { margin-top: 34px; padding-top: 28px; border-top: 1px solid #b8cdb31f; }
+  #about-mobile .esc-mobile-chapter-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  #about-mobile .esc-mobile-chapter-number { width: 27px; height: 27px; border: 1px solid #b4ba8f55; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #d4bd8c; font-family: var(--font-geist-mono), monospace; font-size: .58rem; flex: 0 0 auto; }
+  #about-mobile .esc-mobile-chapter h3 { color: #ececdf; font-size: 1.08rem; font-weight: 550; letter-spacing: -.015em; margin: 0; }
+  #about-mobile .esc-about-paragraph { font-size: .91rem; line-height: 1.9; letter-spacing: .003em; color: #becbc4; margin: 0; text-align: left; }
+  #about-mobile .esc-mobile-domains { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 18px; }
+  #about-mobile .esc-mobile-domains span { color: #cbd9c3; border: 1px solid #9dbd912e; background: #a3bc900a; padding: 6px 9px; border-radius: 4px; font-size: .58rem; line-height: 1.1; }
+  #about-mobile .esc-mobile-endmark { display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 40px; color: #baa575; font-size: .8rem; }
+  #about-mobile .esc-mobile-endmark span { width: 42px; height: 1px; background: #baa57545; }
+}
+@media (max-width: 768px) {
+  /* Leave a reading gutter beside the existing floating navigation controls. */
+  #about-mobile .esc-about-paragraph { padding-right: 48px; }
+}
+@media (max-width: 768px) {
+  body.esc-mobile-about-visible .fireworks { opacity: 0; }
+}

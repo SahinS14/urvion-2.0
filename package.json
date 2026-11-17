@@ -1,0 +1,11 @@
+{
+  "name": "urvion-volume-2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/site/app.js && node --check src/site/events/events.js && node --check scripts/build.mjs"
+  }
+}

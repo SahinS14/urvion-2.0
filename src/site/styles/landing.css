@@ -1,0 +1,70 @@
+/* Local behavior and responsive markup; the reference stylesheet supplies the visual design. */
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+.mobile-parallax-layer, .hero-mobile-tagline, .about-mobile-single-section { display: none; }
+.fireworks { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 9999; pointer-events: none; }
+.mobile-nav-root [hidden], [hidden] { display: none !important; }
+.mobile-nav-burger { flex-shrink: 0; }
+.mobile-nav-burger svg { width: 26px; height: 26px; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100001; padding: 12px 18px; color: #040507; background: white; }
+.skip-link:focus { top: 16px; }
+a:focus-visible, button:focus-visible, [role=button]:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 5px; }
+@media (max-width: 768px) {
+  .desktop-parallax-layer, .about-parallel-container { display: none; }
+  .mobile-parallax-layer, .hero-mobile-tagline, .about-mobile-single-section { display: flex; }
+  .mobile-music-btn { touch-action: manipulation; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+  .about-parallel-container { height: auto; }
+  .about-sticky-viewport { height: auto; position: relative; }
+  .about-parallel-track { width: 100%; height: auto; flex-direction: column; transform: none !important; }
+  .about-frame { width: 100%; min-height: 80vh; }
+}
+@media (max-width: 768px) {
+  .bottom-nav { display: none !important; }
+  .mobile-nav-burger { color: #fff; }
+}
+/* Keep accordion geometry stable while scrolling to or focusing a question. */
+.faq-section, .faq-item { content-visibility: visible; contain-intrinsic-size: none; }
+
+/* URVION Volume 2: nautical materials over the existing layout and motion. */
+:root {
+  --accent-gold: #e8bd68;
+  --accent-gold-dim: #e8bd681f;
+  --accent-gold-glow: #e8bd6840;
+  --accent-gold-border: #e8bd6840;
+}
+.desktop-parallax-layer:nth-child(2) { clip-path: inset(0 50% 0 0); }
+.desktop-parallax-layer:nth-child(3) { clip-path: inset(0 0 0 50%); }
+.parallax-layer img[src$="crew.webp"] { filter: brightness(.82) saturate(.85); }
+.mobile-parallax-layer img[src$="crew.webp"] { filter: brightness(.72) saturate(.85); }
+.mobile-parallax-layer:has(img[alt$="layer 1"]) { clip-path: inset(0 44% 0 0); }
+.mobile-parallax-layer:has(img[alt$="layer 2"]) { clip-path: inset(0 0 0 48%); }
+.mobile-parallax-layer img[alt$="layer 1"] { object-position: 5% center !important; }
+.mobile-parallax-layer img[alt$="layer 2"] { object-position: 95% center !important; }
+.loader-gate-bg, .loader-mobile-panel { background-image: url('/assets/pirates/sea.webp'); }
+.loader-gate-seam { background: linear-gradient(transparent, #f4d797, #a87c37, #f4d797, transparent); }
+.loader-bar-inner { background: linear-gradient(90deg, #8b602b, #f5dda4); }
+.loader-number, .loader-percent { color: #eed29b; }
+.pirate-about-scene { width: 100%; height: 100%; object-fit: cover; opacity: .45; }
+.hero-metallic-explore-btn {
+  background: linear-gradient(180deg, #f5dfae, #b38a47);
+  border-color: #e5c789;
+  color: #221a0d;
+  box-shadow: 0 8px 30px #0009, inset 0 1px 0 #fff9, 0 0 24px #d5ab4933;
+}
+.hero-metallic-reg-box { border-color: #c7a56a66; background: #071617c9; }
+.doomsday-badge-header { border-color: #d7b77455; }
+.doomsday-title-text { color: #f4dfb2; }
+.doomsday-digit-plain { background-image: linear-gradient(180deg, #fff4db, #d6b478 65%, #8b642f); }
+.bottom-nav-pill-metallic, .mobile-nav-pill-wrap, .mobile-music-btn {
+  background: linear-gradient(135deg, #183130f2, #08191cfa);
+  border-color: #c4a36388;
+}
+.hero-mobile-tagline-text { color: #e8d5ae; }
+.nirmit-logo-img { max-width: 230px; width: 180px !important; }
+@media (max-width: 768px) {
+  .nirmit-logo-img { width: 145px !important; max-width: 160px; height: 45px !important; }
+}

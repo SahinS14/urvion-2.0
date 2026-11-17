@@ -1,0 +1,119 @@
+/* Hero-only composition. Separate cutouts keep complete faces and independent depth. */
+#hero-parallax .desktop-parallax-layer,
+#hero-parallax .mobile-parallax-layer { clip-path: none; }
+#hero-parallax .desktop-parallax-layer:nth-child(2) { z-index: 3 !important; }
+#hero-parallax .desktop-parallax-layer:nth-child(3) { z-index: 4 !important; }
+#hero-parallax .desktop-parallax-layer:nth-child(4) { z-index: 2 !important; }
+#hero-parallax .hero-character {
+  position: absolute;
+  top: auto !important;
+  bottom: -2% !important;
+  width: auto !important;
+  height: 87% !important;
+  max-width: none;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  filter: drop-shadow(0 12px 24px #02090a66);
+  pointer-events: none;
+}
+#hero-parallax .hero-character-captain { left: -2% !important; right: auto !important; }
+#hero-parallax .hero-character-navigator { left: auto !important; right: -2% !important; height: 81% !important; }
+#hero-parallax .hero-character-quartermaster {
+  left: auto !important;
+  right: 13% !important;
+  bottom: 3% !important;
+  height: 65% !important;
+  filter: brightness(.75) saturate(.8) drop-shadow(0 12px 24px #02090a66);
+}
+#hero-parallax .parallax-vignette {
+  background: linear-gradient(0deg, #031014ed, #03101400 28%), radial-gradient(ellipse at center, transparent 35%, #020b1026 80%, #020b1059);
+}
+#hero-parallax .parallax-corner-shadows {
+  background: radial-gradient(ellipse at 50% 35%, #010a1073 0%, #010a1033 35%, transparent 65%);
+}
+#hero-parallax .nirmit-text-wrapper {
+  gap: 22px;
+  padding: 36px 0 55px;
+  isolation: isolate;
+}
+#hero-parallax .hero-v2-eyebrow {
+  color: #e7d6b6;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(.58rem, .77vw, .78rem);
+  letter-spacing: .24em;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 2px 12px #000;
+}
+#hero-parallax .hero-v2-wordmark {
+  display: block;
+  width: min(43vw, 680px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 22px #0009);
+}
+#hero-parallax .doomsday-hero-container { width: min(37vw, 550px); gap: 12px; }
+#hero-parallax .doomsday-badge-header { background: #07181a88; border-color: #d6b77a4d; padding: 6px 15px; }
+#hero-parallax .doomsday-title-text { font-size: .63rem; letter-spacing: .18em; }
+#hero-parallax .doomsday-timer-grid { margin-top: 3px; gap: clamp(10px,1.3vw,22px); }
+#hero-parallax .doomsday-digit-plain { font-size: clamp(3rem, 5.2vw, 5rem); line-height: .95; filter: drop-shadow(0 4px 10px #0009); }
+#hero-parallax .doomsday-separator-plain { font-size: clamp(1.7rem,2.5vw,2.6rem); padding-bottom: 18px; opacity: .5; }
+#hero-parallax .doomsday-label-plain { font-size: .55rem; letter-spacing: .17em; margin-top: 9px; }
+#hero-parallax .hero-metallic-reg-box { width: min(39vw, 570px); max-width: none; margin: 0; background: #071516ba; padding: 10px 16px; border-color: #d5b16e4d; }
+#hero-parallax .metallic-box-tag { color: #d4b77e; font-size: .53rem; letter-spacing: .18em; }
+#hero-parallax .metallic-box-content { font-size: .72rem; line-height: 1.5; color: #d9d8cf; }
+#hero-parallax .hero-metallic-explore-btn { padding: 15px 30px; font-size: .74rem; }
+@media (min-width: 1800px) {
+  #hero-parallax .hero-character-captain { left: 2% !important; }
+  #hero-parallax .hero-character-navigator { right: 2% !important; }
+}
+@media (min-width: 769px) and (max-aspect-ratio: 4/3) {
+  #hero-parallax .hero-character { height: 70% !important; }
+  #hero-parallax .hero-character-captain { left: -13% !important; }
+  #hero-parallax .hero-character-navigator { right: -13% !important; height: 66% !important; }
+  #hero-parallax .hero-character-quartermaster { right: 5% !important; height: 52% !important; }
+  #hero-parallax .hero-v2-wordmark { width: 53vw; }
+  #hero-parallax .hero-metallic-reg-box { width: 47vw; }
+}
+@media (max-width: 768px) {
+  #hero-parallax .nirmit-text-wrapper { justify-content: flex-start; padding: max(100px, 15svh) 20px 0; gap: 16px; }
+  #hero-parallax .hero-v2-eyebrow { font-size: .49rem; letter-spacing: .14em; }
+  #hero-parallax .hero-v2-wordmark { width: min(80vw, 440px); }
+  #hero-parallax .doomsday-hero-container { width: min(76vw, 400px); gap: 8px; }
+  #hero-parallax .doomsday-title-text { font-size: .5rem; letter-spacing: .1em; }
+  #hero-parallax .doomsday-badge-header { padding: 5px 10px; }
+  #hero-parallax .doomsday-timer-grid { gap: 12px; }
+  #hero-parallax .doomsday-digit-plain { font-size: clamp(2.6rem, 10vw, 4rem); }
+  #hero-parallax .doomsday-separator-plain { font-size: 1.5rem; padding-bottom: 18px; }
+  #hero-parallax .doomsday-label-plain { font-size: .45rem; margin-top: 6px; }
+  #hero-parallax .hero-metallic-reg-box { width: min(82vw, 440px); padding: 8px 12px; }
+  #hero-parallax .metallic-box-content { font-size: .59rem; line-height: 1.4; }
+  #hero-parallax .metallic-box-tag { font-size: .47rem; }
+  #hero-parallax .hero-metallic-explore-btn { padding: 12px 23px; font-size: .65rem; }
+  #hero-parallax .hero-character { height: 59% !important; bottom: -6% !important; }
+  #hero-parallax .hero-character-captain { left: -20% !important; }
+  #hero-parallax .hero-character-navigator { right: -24% !important; height: 57% !important; }
+  #hero-parallax .hero-mobile-tagline { display: none; }
+  #hero-parallax .parallax-corner-shadows { background: linear-gradient(#010a1055, #010a1022 50%, transparent 70%); }
+}
+@media (max-width: 768px) and (max-height: 720px) {
+  #hero-parallax .nirmit-text-wrapper { padding-top: 85px; gap: 11px; }
+  #hero-parallax .hero-v2-wordmark { width: 68vw; }
+  #hero-parallax .hero-character { height: 54% !important; }
+  #hero-parallax .hero-character-navigator { height: 52% !important; }
+}
+@media (max-width: 768px) {
+  #hero-parallax .hero-character-captain { height: 50% !important; left: calc(18vw - 16.67svh) !important; bottom: -6% !important; }
+  #hero-parallax .hero-character-navigator { height: 48% !important; right: calc(18vw - 16svh) !important; bottom: -6% !important; }
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  #hero-parallax .nirmit-text-wrapper { padding-top: 100px; gap: 12px; }
+  #hero-parallax .hero-v2-wordmark { width: 380px; }
+  #hero-parallax .doomsday-digit-plain { font-size: 3rem; }
+}
+#hero-parallax .desktop-parallax-layer:nth-child(5) { z-index: 1 !important; }
+#hero-parallax .hero-mobile-layer-1 { z-index: 3 !important; }
+#hero-parallax .hero-mobile-layer-2 { z-index: 4 !important; }
+#hero-parallax .hero-mobile-layer-3 { z-index: 1 !important; }
+/* The rear crew member stands nearer the deck horizon, rather than sharing the foreground baseline. */
+#hero-parallax .hero-character-quartermaster { bottom: 14% !important; height: 64% !important; }
