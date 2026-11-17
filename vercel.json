@@ -1,6 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true
+  "functions": {
+    "api/serve.mjs": {
+      "includeFiles": "src/site/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/serve?path=$1"
+    }
+  ]
 }
